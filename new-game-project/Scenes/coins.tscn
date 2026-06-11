@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://dlt7rpbtfp81w"]
+
+[ext_resource type="Texture2D" uid="uid://bn2egajom0nr5" path="res://Assets/brackeys_platformer_assets/sprites/coin.png" id="1_dobl1"]
+[ext_resource type="Script" uid="uid://csh14skwi36wi" path="res://Scripts/coins.gd" id="1_ojwyu"]
+[ext_resource type="AudioStream" uid="uid://c35286xyycgl7" path="res://Assets/brackeys_platformer_assets/sounds/coin.wav" id="3_m2shm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojwyu"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2shm"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nolx5"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_voadd"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgac7"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i61g"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgoy0"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq6wh"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mfwgu"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(128, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkw3d"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(144, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snbde"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(160, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6877r"]
+atlas = ExtResource("1_dobl1")
+region = Rect2(176, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_meaht"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojwyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2shm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nolx5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_voadd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgac7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4i61g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgoy0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq6wh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mfwgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkw3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snbde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6877r")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6y6oo"]
+radius = 6.0
+
+[sub_resource type="Animation" id="Animation_m2shm"]
+resource_name = "Pickup"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_nolx5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xgac7"]
+_data = {
+&"Pickup": SubResource("Animation_m2shm"),
+&"RESET": SubResource("Animation_nolx5")
+}
+
+[node name="Coins" type="Area2D" unique_id=1413693852]
+collision_mask = 2
+script = ExtResource("1_ojwyu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1532735166]
+sprite_frames = SubResource("SpriteFrames_meaht")
+autoplay = "default"
+frame_progress = 0.023156943
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=740452049]
+shape = SubResource("CircleShape2D_6y6oo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer2D" parent="." unique_id=246271917]
+stream = ExtResource("3_m2shm")
+bus = &"SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1667333163]
+libraries/ = SubResource("AnimationLibrary_xgac7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
