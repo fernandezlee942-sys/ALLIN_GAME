@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://brukxo5wfuxx5" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://wddgu6jaiy0m" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://6gwgphr66mec" path="res://Scenes/grapple_controller.gd" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -171,9 +172,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_0gysh")
 }],
-"loop": true,
+"loop": false,
 "name": &"rolling",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -242,8 +243,23 @@ position = Vector2(-1, -12)
 sprite_frames = SubResource("SpriteFrames_2hs0m")
 animation = &"rolling"
 autoplay = "idle"
-frame_progress = 0.3264387
+frame = 7
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1572011848]
 position = Vector2(-1, -5)
 shape = SubResource("CircleShape2D_1jxqw")
+
+[node name="GrappleController" type="Node2D" parent="." unique_id=1563054565]
+script = ExtResource("3_6t5aa")
+rest_length = null
+stiffness = null
+damping = null
+
+[node name="RayCast2D" type="RayCast2D" parent="GrappleController" unique_id=888763457]
+target_position = Vector2(400, 0)
+
+[node name="Line2D" type="Line2D" parent="GrappleController" unique_id=714986208]
+points = PackedVector2Array(0, 0, 0, 0)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
