@@ -399,7 +399,8 @@ offset_right = 192.0
 offset_bottom = -68.0
 theme_override_fonts/font = ExtResource("7_1l0tm")
 theme_override_font_sizes/font_size = 8
-text = "Save the princess!
+text = "Collect The Coins!
+- esc to pause
 - space bar to jump (double jump avaiable)
 - a and d for left and right
 - w for rolling
