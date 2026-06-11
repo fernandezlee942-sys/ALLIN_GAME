@@ -13,4 +13,4 @@ func _process(_delta: float) -> void:
 
 func update_ui() -> void:
 	# Format teks menjadi: "X out of Y coins"
-	coin_label.text = "This is the game final area, collect all the coins before going in.\nYou have collected "+str(Global.score) + " out of " + "27 coins."
+	coin_label.text = "This is the game final area, collect at least 10 coins before going in.\nYou have collected "+str(Global.score) + " coins."

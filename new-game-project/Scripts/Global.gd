@@ -2,9 +2,10 @@ extends Node
 
 var score: int = 0
 var collected_coin_paths: Array[String] = []
-
-# Variabel hardcode untuk menampung alamat scene game yang sedang aktif
 var current_game_scene: Node2D = null
+
+# Variabel penampung batas koin yang dikirim dari scene Game
+var max_coins_needed: int = 1
 
 const SAVE_PATH = "res://savegame.cfg" 
 
@@ -14,13 +15,11 @@ func add_coin(coin_id: String) -> void:
 		score += 1
 		print("[GLOBAL] Koin bertambah! Total sekarang: ", score)
 		
-		# --- FITUR HARDCODE KANDIDAT UTAMA ---
-		# Setiap kali koin bertambah, langsung cek apakah scene game ada dan koin mencapai 27
-		if score >= 27 and current_game_scene != null:
+		# Menggunakan variabel max_coins_needed (bukan angka 27 mati)
+		if score >= max_coins_needed and current_game_scene != null:
 			if current_game_scene.has_method("hapus_beberapa_tile"):
 				current_game_scene.hapus_beberapa_tile()
 		
-		# Otomatis save game setiap ambil koin
 		save_game() 
 
 # --- FUNGSI SAVE GAME ---
@@ -46,8 +45,7 @@ func load_game() -> bool:
 			
 		print("Game Berhasil Di-Load! Skor dimuat: ", score)
 		
-		# Jika pas di-load ternyata koinnya sudah 27 atau lebih, langsung hancurkan tilenya
-		if score >= 27 and current_game_scene != null:
+		if score >= max_coins_needed and current_game_scene != null:
 			if current_game_scene.has_method("hapus_beberapa_tile"):
 				current_game_scene.hapus_beberapa_tile()
 				

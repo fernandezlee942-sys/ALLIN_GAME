@@ -287,7 +287,7 @@ shape = SubResource("WorldBoundaryShape2D_i6g32")
 [node name="Coins" type="Node" parent="." unique_id=1927314557]
 
 [node name="Coins1" parent="Coins" unique_id=1413693852 instance=ExtResource("3_3dryh")]
-position = Vector2(-110, -78)
+position = Vector2(-112, -78)
 
 [node name="Coins2" parent="Coins" unique_id=1612403131 instance=ExtResource("3_3dryh")]
 position = Vector2(-945, 215)
@@ -335,10 +335,10 @@ position = Vector2(929, -702)
 position = Vector2(-103, -781)
 
 [node name="Coins13" parent="Coins" unique_id=1034302259 instance=ExtResource("3_3dryh")]
-position = Vector2(-589, -1031)
+position = Vector2(-370, -195)
 
 [node name="Coins14" parent="Coins" unique_id=911835238 instance=ExtResource("3_3dryh")]
-position = Vector2(-1396, -1106)
+position = Vector2(-1158, -1250)
 
 [node name="Coins24" parent="Coins" unique_id=1296257278 instance=ExtResource("3_3dryh")]
 position = Vector2(-2212, -1528)
@@ -350,13 +350,13 @@ position = Vector2(-1593, -1514)
 position = Vector2(-259, -432)
 
 [node name="Coins27" parent="Coins" unique_id=1385035024 instance=ExtResource("3_3dryh")]
-position = Vector2(-33, -324)
+position = Vector2(395, -694)
 
 [node name="Coins15" parent="Coins" unique_id=166286204 instance=ExtResource("3_3dryh")]
-position = Vector2(-1995, -888)
+position = Vector2(-1992, -884)
 
 [node name="Coins16" parent="Coins" unique_id=1923929857 instance=ExtResource("3_3dryh")]
-position = Vector2(-1728, -745)
+position = Vector2(-1630, -296)
 
 [node name="Coins17" parent="Coins" unique_id=1486050482 instance=ExtResource("3_3dryh")]
 position = Vector2(-1725, -269)
