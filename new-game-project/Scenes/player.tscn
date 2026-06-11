@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://brukxo5wfuxx5" path="res://Assets/brackeys_platformer_assets/sprites/knight.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://wddgu6jaiy0m" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Script" uid="uid://6gwgphr66mec" path="res://Scenes/grapple_controller.gd" id="3_6t5aa"]
+[ext_resource type="Script" uid="uid://6gwgphr66mec" path="res://Scripts/grapple_controller.gd" id="3_6t5aa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -252,9 +252,6 @@ shape = SubResource("CircleShape2D_1jxqw")
 
 [node name="GrappleController" type="Node2D" parent="." unique_id=1563054565]
 script = ExtResource("3_6t5aa")
-rest_length = null
-stiffness = null
-damping = null
 
 [node name="RayCast2D" type="RayCast2D" parent="GrappleController" unique_id=888763457]
 target_position = Vector2(400, 0)

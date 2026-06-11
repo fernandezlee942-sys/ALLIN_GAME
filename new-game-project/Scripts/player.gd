@@ -10,7 +10,6 @@ const DECELERATION = 0.1
 
 const JUMP_VELOCITY = -300.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # 🌟 DOUBLE JUMP TRACKERS
 var jumps_made: int = 0
@@ -50,13 +49,14 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0:
 		animated_sprite_2d.flip_h = true
 		
-	# Handle rolling input
+# Handle rolling input
 	if Input.is_action_just_pressed("roll") and not isRolling:
 		isRolling = true
 		animated_sprite_2d.play("rolling")
-		var rollDir = direction if direction != 0 else (-1 if animated_sprite_2d.flip_h else 1)
+		# Mengubah -1 menjadi -1.0 dan 1 menjadi 1.0 agar kompatibel dengan tipe float dari 'direction'
+		var rollDir = direction if direction != 0 else (-1.0 if animated_sprite_2d.flip_h else 1.0)
 		velocity.x = rollDir * rollSpeed
-
+		
 	# Normal movement and animation processing
 	if not isRolling:
 		if is_on_floor():

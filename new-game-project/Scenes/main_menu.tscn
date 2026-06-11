@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://2yvq6yiiep7y"]
+
+[ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://cdlqgpcucerjm" path="res://Scripts/banner.png" id="2_1ehe0"]
+[ext_resource type="FontFile" uid="uid://3smgerxoba83" path="res://Assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="3_ce3w2"]
+
+[node name="MainMenu" type="Control" unique_id=1865385818]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 266.0
+offset_top = 131.0
+offset_right = 306.0
+offset_bottom = 171.0
+script = ExtResource("1_28flt")
+
+[node name="Banner" type="Sprite2D" parent="." unique_id=2047456984]
+position = Vector2(366.75003, 234.25002)
+scale = Vector2(1.648125, 1.2425001)
+texture = ExtResource("2_1ehe0")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1252203869]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.0
+offset_top = 397.0
+offset_right = 247.0
+offset_bottom = 525.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1306011053]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Start Game"
+
+[node name="LoadButton" type="Button" parent="VBoxContainer" unique_id=42398635]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Load Game"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=281804199]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Exit Game
+"
