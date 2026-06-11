@@ -5,7 +5,7 @@ extends Node2D
 # ====================================================================
 # VARIABEL TARGET KOIN (Bisa kamu ganti jadi 1 untuk testing!)
 # Kamu juga bisa mengubah angka ini langsung dari Inspector kanan Godot
-@export var coin_threshold: int = 1  
+@export var coin_threshold: int = 10
 # ====================================================================
 
 func _ready() -> void:
@@ -26,7 +26,7 @@ func check_hardcoded_coins() -> void:
 func hapus_beberapa_tile() -> void:
 	print("[DEBUG - HARDCODE] Target koin tercapai! Menghancurkan gerbang...")
 	
-	var layer_id = 10
+	var layer_id = 1
 	var target_tiles: Array[Vector2i] = [
 		Vector2i(236, -27),
 		Vector2i(237, -27),

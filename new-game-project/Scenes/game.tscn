@@ -393,10 +393,10 @@ autoplay = &"Move"
 [node name="Label" type="Node" parent="." unique_id=881939453]
 
 [node name="Label2" type="Label" parent="Label" unique_id=2014786829]
-offset_left = -106.0
+offset_left = -107.0
 offset_top = -142.0
-offset_right = 192.0
-offset_bottom = -68.0
+offset_right = 191.0
+offset_bottom = -57.0
 theme_override_fonts/font = ExtResource("7_1l0tm")
 theme_override_font_sizes/font_size = 8
 text = "Collect The Coins!
@@ -409,10 +409,10 @@ text = "Collect The Coins!
 "
 
 [node name="Label3" type="Label" parent="Label" unique_id=1713105145]
-offset_left = 3534.0
-offset_top = 46.0
-offset_right = 4029.0
-offset_bottom = 120.0
+offset_left = 3502.0
+offset_top = 57.0
+offset_right = 3997.0
+offset_bottom = 131.0
 theme_override_fonts/font = ExtResource("7_1l0tm")
 theme_override_font_sizes/font_size = 16
 text = "Kamu telah menamatkan game ini, kami ucapkan terima kasih atas waktu yang diluangkan"
